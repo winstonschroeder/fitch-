@@ -7,8 +7,8 @@ toplevel.install()
 import main
 import app
 
-app.instantiate()               # Construct QApplication object
-main.main()                     # Parse command line, create windows etc
+app.instantiate()
+main.main()
 
 sys.excepthook = app.excepthook # Show Python errors in a bugreport window
 
