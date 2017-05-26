@@ -2,9 +2,6 @@ __all__ = ['Base']
 
 class Base(object):
     """ Base object for fitch. """ 
-    __type = 'Base'
-    def type(self):
-        return self.__type
 
     def __str__(self):
         #return '{type}: {attrib}'.format(type=self.type, attrib=str(self.__getattribute__()))
