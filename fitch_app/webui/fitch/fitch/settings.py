@@ -22,10 +22,18 @@ SECRET_KEY = '_y)xf$@m6x_zponkck+fosvq-(0k25)_^u)jhh-0(#5l$(wsgv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# LOGIN_REDIRECT_URL = '/'
+
+# LOGIN_URL = 'django.contrib.auth.views.login'
+
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['*','rockberrypi.local']
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.request',
+)
 
 # Application definition
 
@@ -34,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.sites',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
